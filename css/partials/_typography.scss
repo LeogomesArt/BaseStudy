@@ -1,7 +1,7 @@
 // Typography of project
 
 @mixin typeface-1($size, $device: desktop) {
-  font-family: "Sora", sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @if $size == h1 and $device == desktop {
     font-size: 64px;
@@ -46,7 +46,7 @@
     font-size: 18px;
     line-height: 130%;
   } @else if $size == p2 and $device == desktop {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
   } @else if $size == p2 and $device == mobile {
     font-size: 14px;
@@ -85,7 +85,7 @@ h3 {
 }
 
 h4 {
-  color: $black-normal;
+  color: #fff;;
   @include typeface-1(h4, desktop);
   @include responsive(s) {
     @include typeface-1(h4, mobile);
@@ -93,11 +93,9 @@ h4 {
 }
 
 h5 {
-  text-transform: uppercase;
-  background: linear-gradient(220.94deg, #a950c4 14.43%, #82269e 85.28%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
+  color: #fff;
+
   font-weight: bold;
 
   @include typeface-1(h5, desktop);
