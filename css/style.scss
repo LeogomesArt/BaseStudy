@@ -28,11 +28,20 @@ body {
   
   justify-content: center;
 
-  
-
   background-color: $background-dark;
-}
 
+   @include responsive(s) {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+     display: flex;
+  
+    justify-content: center;
+
+    background-color: $background-dark;
+  }
+}
 // Para deixar imagens e SVGs fluidos
 svg {
   width: 100%;
@@ -46,7 +55,7 @@ img {
   border: 1px solid red;
 }
 
-@import "partials/menu";
+@import "partials/sidebar";
 @import "partials/swiper";
 @import "partials/icons";
 @import "partials/footer";

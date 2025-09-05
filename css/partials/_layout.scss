@@ -38,7 +38,8 @@ $container-s: 540px;
 
 .container {
   width: $container-l;
-  
+  height: 92vh;
+
   margin: 32px 32px;
 
   border-radius: 32px;
@@ -54,61 +55,37 @@ $container-s: 540px;
   overflow: hidden;
 
   @include responsive(s) {
-    flex-direction: column;
+    height: 100vh;
+    background-color: #090B0C;
 
-    padding: 32px 18px;
+    display: flex;
+
+    flex-direction: column;
+    overflow: hidden;
+
+    
   }
 }
 
-.sidebar{
-  position: relative;
-  top: 0;
-  left: 0;
-  max-width: 280px;
-  height: 100vh;
 
-  padding: 32px;
 
-  background-color: #191E21;
-  display: flex;
-  justify-content: start;
+.main{
   
+  position: relative;
+
+  scroll-behavior: smooth;
+
+  overflow: auto;
+
   @include responsive(s) {
-    width: 100%;
-    height: auto;
-    padding: 12px 0;
     position: relative;
   }
-}
 
-.sidebar-item-1{
-  width: 100%;
-  display: flex;
-  align-items: center;
   
-
-  transition: 0.5s ease-out;
-  
-  .img{
-   
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-  }
-
-  &:hover{
-    cursor: pointer;
-    scale: 1.02;
-  }
- 
 }
-
-.linha{
-  max-width: 216px;
-  height: 1px;
-
-  background: $gray-7;
-}
+::-webkit-scrollbar{
+    width: 0px;
+  }
 
 
 
@@ -125,7 +102,7 @@ $container-s: 540px;
     &:hover{
     
     transform: scale(1.3);
-  }
+    }
   }
 }
 
